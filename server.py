@@ -2,11 +2,12 @@ import requests
 import socket
 
 class Server:
+    c=None
     def __init__(self):
         self.activeSocket= socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.activeSocket.bind(('0.0.0.0',55628))
         self.activeSocket.listen(1)
-        self c=self.activeSocket.accept()
+        c=self.activeSocket.accept()
 
     def main(self):
         while(True):
